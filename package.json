@@ -1,0 +1,23 @@
+{
+  "name": "pearls",
+  "version": "1.0.0",
+  "description": "repository for itsatune.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/http-server/bin/http-server --port 8090",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herereadthis/pearls.git"
+  },
+  "author": "Jimmy Ha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/herereadthis/pearls/issues"
+  },
+  "homepage": "https://github.com/herereadthis/pearls#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
