@@ -4,7 +4,10 @@
   "description": "repository for itsatune.com",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/http-server/bin/http-server --port 8090",
+    "dist": "node ./scripts/run-dist.js",
+    "less": "./node_modules/less/bin/lessc ./src/less/styles.less ./src/styles.css",
+    "start": "node ./scripts/run-local.js --port=8090",
+    "prod": "node ./scripts/run-dist.js --port=8091",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +21,15 @@
   },
   "homepage": "https://github.com/herereadthis/pearls#readme",
   "dependencies": {
-    "http-server": "^0.12.3"
+    "@node-minify/clean-css": "^6.1.0",
+    "@node-minify/core": "^6.1.0",
+    "http-server": "^0.12.3",
+    "shelljs": "^0.8.4",
+    "yargs": "^16.1.0"
+  },
+  "devDependencies": {
+    "@node-minify/html-minifier": "^6.1.0",
+    "less": "^3.12.2",
+    "replace-in-files-cli": "^1.0.0"
   }
 }
