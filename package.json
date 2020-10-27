@@ -4,7 +4,7 @@
   "description": "repository for itsatune.com",
   "main": "index.js",
   "scripts": {
-    "less": "./node_modules/less/bin/lessc ./src/less/styles.less ./src/styles.css",
+    "less": "./node_modules/less/bin/lessc ./src/less/styles.less ./temp/styles.css",
     "start": "NODE_ENV=development node ./scripts/run-local.js --port=8090",
     "dist": "node ./scripts/run-dist.js",
     "prod": "NODE_ENV=production node ./scripts/run-dist.js --port=8091",

@@ -1,5 +1,52 @@
 @import './reset.less';
 
+
+// Colors
+
+// skin transition
+@skin0: #CF6736;
+@skin1: #E88D5A;
+@skin2: #F1A976;
+@skin3: #FCCF99;
+
+// Pink Transition
+@pink0: #D53860;
+@pink1: #D8675E;
+@pink2: #F0678C;
+
+// Grayscale
+@gray0: #1C1C1C;
+@gray1: #E3E2C8;
+@gray2: #FEFFEC;
+
+// Blue Transition
+@blue0: #2B383D;
+@blue1: #25555F;
+@blue2: #297181;
+@blue3: #328D90;
+
+// Reds
+@red0: #AA1C1C;
+@red1: #C62920;
+
 body {
     font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', sans-serif;
+    background-image:
+            linear-gradient(90deg, @gray2, @gray2),
+            linear-gradient(90deg, @skin3, @skin3),
+            linear-gradient(90deg, @skin2, @skin2),
+            linear-gradient(90deg, @skin1, @skin1),
+            linear-gradient(90deg, @skin0, @skin0),
+            linear-gradient(90deg, @gray0, @gray0);
+    background-size:
+        100vw 1vh;
+    background-position:
+            59.375vw 0,
+            34.375vw 0,
+            18.75vw 0,
+            9.375vw 0,
+            3.125vw 0,
+            0vw 0;
+    background-repeat:
+        repeat-y;
 }
