@@ -29,6 +29,27 @@
 @red0: #AA1C1C;
 @red1: #C62920;
 
+//
+//@font-face {
+//    font-family: 'GibbyOpti-ExtraBold';
+//    src:  url('../fonts/GibbyOpti-ExtraBold.otf') format('otf');
+//    font-weight: normal;
+//    font-style: normal;
+//};
+
+@font-face {
+    font-family: "GibbyOpti-ExtraBold";
+    src: url("../fonts/GibbyOpti-ExtraBold.ttf") format("truetype"),
+    url("../fonts/GibbyOpti-ExtraBold.woff") format("woff"),
+    url("../fonts/GibbyOpti-ExtraBold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logoFont {
+    font-family: 'GibbyOpti-ExtraBold';
+}
+
 body {
     font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', sans-serif;
     background-image:
@@ -49,4 +70,10 @@ body {
             0vw 0;
     background-repeat:
         repeat-y;
+}
+
+h1 {
+    .logoFont;
+    font-size: 10rem;
+    color: @pink2;
 }

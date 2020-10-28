@@ -23,14 +23,15 @@ try {
     logger.info('creating dist folder');
     shell.exec('rm -rf dist');
     shell.exec('mkdir dist');
-    shell.exec('./node_modules/less/bin/lessc ./src/less/styles.less ./dist/styles.css');
+    shell.exec('./node_modules/less/bin/lessc ./src/styles/styles.less ./dist/styles/styles.css');
+    shell.exec('cp -r ./src/fonts/ ./dist/fonts/');
     minify({
         compressor: cleanCSS,
-        input: './dist/styles.css',
-        output: './dist/styles.min.css',
+        input: './dist/styles/styles.css',
+        output: './dist/styles/styles.min.css',
         callback: function(err, min) {}
     });
-    shell.exec('rm ./dist/styles.css');
+    shell.exec('rm ./dist/styles/styles.css');
     minify({
         compressor: htmlMinifier,
         input: './index.html',
@@ -39,8 +40,8 @@ try {
     });
     replace.sync({
         files: './dist/index.html',
-        from: /temp\/styles.css/,
-        to: 'styles.min.css'
+        from: /temp\/styles\/styles.css/,
+        to: 'styles\/styles.min.css'
     });
 
 
