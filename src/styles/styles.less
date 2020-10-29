@@ -50,17 +50,16 @@
     font-family: 'GibbyOpti-ExtraBold';
 }
 
-body {
-    font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', sans-serif;
+.gradient1 {
     background-image:
-            linear-gradient(90deg, @gray2, @gray2),
+            linear-gradient(90deg, @gray0, @gray0),
             linear-gradient(90deg, @skin3, @skin3),
             linear-gradient(90deg, @skin2, @skin2),
             linear-gradient(90deg, @skin1, @skin1),
             linear-gradient(90deg, @skin0, @skin0),
             linear-gradient(90deg, @gray0, @gray0);
     background-size:
-        100vw 1vh;
+            100vw 1vh;
     background-position:
             59.375vw 0,
             34.375vw 0,
@@ -69,11 +68,58 @@ body {
             3.125vw 0,
             0vw 0;
     background-repeat:
-        repeat-y;
+            repeat-y;
+}
+
+.gradient2 {
+    background-image:
+            linear-gradient(90deg, @gray2, @gray2),
+            linear-gradient(90deg, @blue3, @blue3),
+            linear-gradient(90deg, @blue2, @blue2),
+            linear-gradient(90deg, @blue1, @blue1),
+            linear-gradient(90deg, @blue0, @blue0),
+            linear-gradient(90deg, @gray0, @gray0);
+    background-size:
+            100vw 1vh;
+    background-position:
+            59.375vw 0,
+            34.375vw 0,
+            18.75vw 0,
+            9.375vw 0,
+            3.125vw 0,
+            0vw 0;
+    background-repeat:
+            repeat-y;
+}
+
+body {
+    font-family: 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', sans-serif;
+    .gradient2;
+}
+
+.sectionIntro {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+
+    > div {
+        height: 100%;
+    }
+
+    .videoContainer {
+        width: 50%;
+    }
+
+    .titleContainer {
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
 }
 
 h1 {
     .logoFont;
     font-size: 10rem;
+    line-height: 10rem;
     color: @pink2;
 }
