@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
     <title>ITSA TUNE</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <!--<meta name="msvalidate.01" content="">-->
+    <!--<meta name="google-site-verification" content="">-->
+    <base href="/">
     <link rel="stylesheet" type="text/css" href="./temp/styles/styles.css" />
 </head>
 <body>
 
+<script>
+var foo = function() {
+    window.location.href = 'https://www.youtube.com/watch?v=01oqNySGvss';
+}
+</script>
+
 <section class="sectionIntro">
+    <div class="titleContainer">
+        <h1 class="introTitle">Itsa Tune</h1>
+    </div>
     <div class="videoContainer">
-        <div class="videoThumbnail">
+        <div class="videoThumbnail" onClick="foo()">
             <img src="https://s3.amazonaws.com/assets.itsatune.com/img/harp_song_1.jpg" width="100%" height="100%"/>
             <div class="videoPlayButton">
                 <img
-                        class="playButtonIcon"
-                        src="https://s3.amazonaws.com/assets.itsatune.com/img/play_button_300.png" width="100%" height="100%"/>
+                    class="playButtonIcon"
+                    src="https://s3.amazonaws.com/assets.itsatune.com/img/play_button_300.png"
+                    width="100%"
+                    height="100%"/>
             </div>
         </div>
-    </div>
-    <div class="titleContainer">
-        <h1>Itsa Tune</h1>
     </div>
 </section>
 <script>
