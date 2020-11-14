@@ -25,6 +25,7 @@ try {
     shell.exec('mkdir dist');
     shell.exec('./node_modules/less/bin/lessc ./src/styles/styles.less ./dist/styles/styles.css');
     shell.exec('cp -r ./src/fonts/ ./dist/fonts/');
+    shell.exec('cp -r ./src/favicon.ico ./dist/favicon.ico');
     minify({
         compressor: cleanCSS,
         input: './dist/styles/styles.css',
@@ -42,6 +43,11 @@ try {
         files: './dist/index.html',
         from: /temp\/styles\/styles.css/,
         to: 'styles\/styles.min.css'
+    });
+    replace.sync({
+        files: './dist/index.html',
+        from: /temp\/favicon.ico/,
+        to: 'favicon.ico'
     });
 
 
